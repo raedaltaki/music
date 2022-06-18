@@ -13,6 +13,9 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'vuejs-accessibility/label-has-for': 'off',
+    // 'jsx-ally/label-has-associated-control' : 'off',
+    // 'jsx-a11y/label-has-for': 0
   },
   overrides: [
     {
