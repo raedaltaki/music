@@ -4,7 +4,7 @@
         <nav class="container mx-auto flex justify-start items-center py-5 px-4">
             <!-- App Name -->
             <router-link class="text-white font-bold uppercase text-2xl mr-4"
-                to="/">
+                :to="{ name: 'home' }" exact-active-class="no-active">
                 Music
             </router-link>
 
@@ -13,7 +13,8 @@
                 <ul class="flex flex-row mt-1">
                     <!-- Navigation Links -->
                     <li>
-                        <router-link class="px-2 text-white" to="/about">
+                        <router-link class="px-2 text-white"
+                        :to="{ name: 'about' }">
                             About
                         </router-link>
                     </li>
@@ -24,7 +25,8 @@
                     </li>
                     <template v-else>
                         <li>
-                            <router-link class="px-2 text-white" to="/manage">
+                            <router-link class="px-2 text-white"
+                            :to="{ name: 'manage' }">
                                 Manage
                             </router-link>
                         </li>
@@ -39,7 +41,7 @@
 </template>
 
 <script>
-import { mapMutations, mapState, mapActions } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 
 export default {
   name: 'AppHeader',
@@ -48,10 +50,19 @@ export default {
   },
   methods: {
     ...mapMutations(['toggleAuthModal']),
-    ...mapActions(['signout']),
-    // signout() {
-    //     this.$store.dispatch('signout');
-    // }
+    // ...mapActions(['signout']),
+    signout() {
+      //   this.$store.dispatch('signout', {
+      //     router: this.$router,
+      //     route: this.$route,
+      //   });
+      this.$store.dispatch('signout');
+      //   console.log(this.$route);
+      //   if (this.$router.name === 'manage') {
+      if (this.$route.meta.requiresAuth) {
+        this.$router.push({ name: 'home' });
+      }
+    },
     // toggleAuthModal() {
     //   this.$store.commit('toggleAuthModal');
     // },

@@ -47,6 +47,17 @@ export default createStore({
         commit('toggleAuth');
       }
     },
+    //   async signout({ commit }, payload) {
+    //     await auth.signOut();
+
+    //     commit('toggleAuth');
+
+    //     // console.log(payload);
+    //     if (payload.route.meta.requiresAuth) {
+    //       payload.router.push({ name: 'home' });
+    //     }
+    //   },
+    // },
     async signout({ commit }) {
       await auth.signOut();
 
