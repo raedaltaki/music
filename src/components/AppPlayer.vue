@@ -22,7 +22,7 @@
         </div>
         <!-- Scrub Container  -->
         <span class="block w-full h-2 rounded m-1 mt-2 bg-gray-200 relative cursor-pointer"
-          @click.prevent="updateSeek" @KeyDown="{updateSeek}">
+          @click.prevent="updateSeek" @KeyDown="updateSeek">
           <!-- Player Ball -->
           <span class="absolute top-neg-8 text-gray-800 text-lg"
             :style="{ left: playerProgress }">
