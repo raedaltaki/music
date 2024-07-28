@@ -1,4 +1,5 @@
 {
+  "homepage": "https://raedaltaki.github.io/music/",
   "name": "music",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +10,8 @@
     "test:unit:update": "vue-cli-service test:unit -u",
     "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
-    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
+    "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
     "@vee-validate/rules": "^4.5.11",
