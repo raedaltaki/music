@@ -32,6 +32,7 @@
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
     "@intlify/vue-i18n-loader": "^3.0.0",
+    "@vitest/ui": "^0.19.1",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-e2e-cypress": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
@@ -50,6 +51,7 @@
     "eslint-plugin-vue": "^8.0.3",
     "eslint-plugin-vuejs-accessibility": "^1.1.0",
     "jest": "^27.0.5",
+    "rollup-plugin-visualizer": "^5.7.1",
     "vue-cli-plugin-i18n": "~2.3.1",
     "vue-cli-plugin-tailwind": "^3.0.0"
   }

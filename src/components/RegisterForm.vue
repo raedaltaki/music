@@ -93,7 +93,7 @@ export default {
         name: 'required|min:3|max:100|alpha_spaces',
         email: 'required|min:3|max:100|email',
         age: 'required|min_value:18|max_value:100',
-        password: 'required|min:3|max:32|alpha_spaces',
+        password: 'required|min:3|max:32',
         confirm_password: 'passwords_mismatch:@password',
         country: 'required|counrty_excluded:Antarctica',
         tos: 'tos',
